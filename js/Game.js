@@ -55,16 +55,24 @@ class Game {
 
   checkForWin() {
     let letterItems = document.getElementsByClassName('hide');
-    return letterItems.length;
+    if (letterItems.length === 0){
+      return true;
+    } else {
+      return false;
+    }
   }
 
   gameOver() {
     const overlay = document.getElementById('overlay');
-    overlay.style.display = 'initial';
+    const message = document.querySelector('h1');
+    document.querySelector('button').textContent = 'Play Again?';
+    overlay.style.display = 'block';
     if (this.checkForWin()) {
       overlay.className = 'win';
+      message.textContent = 'Phrase HUNTED, you won!!'
     } else {
-      overlay.className = 'loss';
+      overlay.className = 'lose';
+      message.textContent = 'The phrase escaped you. Better luck next time.'
     }
 
   }
