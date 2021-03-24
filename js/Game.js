@@ -64,7 +64,19 @@ class Game {
       overlay.className = 'lose';
       message.textContent = 'The phrase escaped you. Better luck next time.'
     }
+  }
 
+  resetGame() {
+    document.querySelector('ul').innerHTML = '';
+    const tries = document.getElementsByClassName('tries');
+    let keys = document.getElementsByClassName('key');
+    for (let i = 0; i < keys.length; i++) {
+      keys[i].className = 'key';
+      keys[i].disabled = false;
+    }
+    for (let i = 0; i < tries.length; i++) {
+      tries[i].firstElementChild.src = "images/liveHeart.png";
+    }
   }
 
 }
