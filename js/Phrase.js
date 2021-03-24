@@ -24,9 +24,7 @@ class Phrase {
   }  
 
   checkLetter(letter) {
-    if (this.phrase.includes(letter)) {
-      this.showMatchedLetter(letter);
-    }
+    return this.phrase.includes(letter);
   }
 
   showMatchedLetter(letter) {
