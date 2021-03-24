@@ -26,12 +26,7 @@ class Game {
   }
 
   handleInteractions(button, letter) {
-    const buttons = document.getElementsByClassName('key');
-    for (let i = 0; i < buttons.length; i++) {
-      if (letter === buttons[i].textContent) {
-        buttons[i].disabled = true;
-      }
-    }
+    button.disabled = true;
     if (this.activePhrase.checkLetter(letter)) {
       button.classList.add('chosen');
       this.activePhrase.showMatchedLetter(letter);
@@ -54,12 +49,7 @@ class Game {
   }
 
   checkForWin() {
-    let letterItems = document.getElementsByClassName('hide');
-    if (letterItems.length === 0){
-      return true;
-    } else {
-      return false;
-    }
+    return (document.getElementsByClassName('hide').length ? 0 : true);
   }
 
   gameOver() {
@@ -69,7 +59,7 @@ class Game {
     overlay.style.display = 'block';
     if (this.checkForWin()) {
       overlay.className = 'win';
-      message.textContent = 'Phrase HUNTED, you won!!'
+      message.textContent = 'Phrase HUNTED, you win!!'
     } else {
       overlay.className = 'lose';
       message.textContent = 'The phrase escaped you. Better luck next time.'
