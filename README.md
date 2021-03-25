@@ -1,8 +1,8 @@
 # A Game Show App
- My fourth Treehouse Techdegree project: A "find an affirmation" game in which a player tries to guess letters in a hidden phrase/affirmation. If they guess all the letters in the phrase, with five or less misses, they win. If they guess incorrect letters five times, they've lost the game. 
+ My fourth Treehouse Techdegree project: A "find an affirmation" game in which a player tries to guess letters in a hidden phrase/affirmation. If they guess all the letters in the phrase, with five or less misses, they win. They lose the game if they guess incorrect letters five times. 
  
  I am going for an exceeds expectations grade, so my game includes some custom styles and works with keyboard key presses (not just clicks on the game keyboard). My custom styles are: 
- - Changing the game name to "Find An Affirmation"
+ - Changing the name of the game to "Find An Affirmation"
  - Changing the start game button to say "Play Again?" after the first game
  - Setting the lose overlay to a soft pink and the win overlay to a softer green
  - Setting the correct button/key background color to match the phrase letter background color
