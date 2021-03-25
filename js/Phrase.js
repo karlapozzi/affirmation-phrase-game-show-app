@@ -27,7 +27,8 @@ class Phrase {
     }
   }  
 
-//Method to check whether or not a guessed letter is in the phrase and returns a boolean
+//Method to check whether or not a guessed letter is in the phrase 
+//Returns a boolean
   checkLetter(letter) {
     return this.phrase.includes(letter);
   }

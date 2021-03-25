@@ -29,6 +29,7 @@ class Game {
   }
 
 //Method to handle player's interactions/guesses 
+//Button and letter params come from the event listeners in js/app.js
   handleInteractions(button, letter) {
     button.disabled = true;
     //If the guess is right, mark keyboard letter as chosen and show matched letters in phrase
@@ -58,6 +59,7 @@ class Game {
   }
 
 //Method to check for win
+//Returns boolean
   checkForWin() {
     //The player wins by "showing"/guessing all the letters, which means hidden letter count would be 0
     return (document.getElementsByClassName('hide').length ? 0 : true);
