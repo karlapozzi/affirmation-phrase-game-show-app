@@ -7,7 +7,6 @@ const keyButtons = document.getElementsByClassName('key');
 //Listen for clicks on the start/play game button
 playButton.addEventListener('click', () => {
   game = new Game();
-  game.resetGame();
   game.startGame();
 });
 
@@ -21,9 +20,10 @@ keyboard.addEventListener('click', (event) => {
 //Listen for key presses on the player's actual keyboard
 document.addEventListener('keydown', (event) => {
   for (let i = 0; i < keyButtons.length; i++) {
+    let button = keyButtons[i];
     let letter = keyButtons[i].textContent;
-    if (event.key === letter) {
-      game.handleInteractions(keyButtons[i], letter);
+    if (event.key === letter && !button.disabled) {
+      game.handleInteractions(button, letter);
     }
   }
 });

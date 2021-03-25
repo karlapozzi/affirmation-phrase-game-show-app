@@ -81,6 +81,7 @@ class Game {
       message.innerHTML = `Everything is impermanent, the affirmation floated away. </br> 
       Better luck next time!`
     }
+    this.resetGame();
   }
 
 //Method to reset the game by clearing phrase letters, heart guesses/lives, and keyboard guesses 
