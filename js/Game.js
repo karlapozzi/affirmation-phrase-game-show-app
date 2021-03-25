@@ -6,11 +6,11 @@ class Game {
   constructor() {
     this.missed = 0;
     this.phrases = [
-      new Phrase('Brando'),
-      new Phrase('Karla'),
-      new Phrase('Nellie'),
-      new Phrase('Konan'),
-      new Phrase('Pozzi')
+      new Phrase('Practice radical self love'),
+      new Phrase('You are worthy of rest'),
+      new Phrase('Liberate yourself from your inner critic'),
+      new Phrase('You are enough and then some'),
+      new Phrase('You can make a difference')
     ];
     this.activePhrase = null;
   }
@@ -72,11 +72,14 @@ class Game {
     //If the player wins, show win phrase and overlay
     if (this.checkForWin()) {
       overlay.className = 'win';
-      message.textContent = 'Phrase HUNTED, you win!!'
+      message.innerHTML = `You guessed the affirmation! </br>
+      "${this.activePhrase.phrase.toUpperCase()}." </br>
+      Repeat this phrase often to cultivate positive self talk.`
     //If not, that means they lost and lose phrase and overlay is shown 
     } else {
       overlay.className = 'lose';
-      message.textContent = 'The phrase escaped you. Better luck next time.'
+      message.innerHTML = `Everything is impermanent, the affirmation floated away. </br> 
+      Better luck next time!`
     }
   }
 
