@@ -6,11 +6,11 @@ class Game {
   constructor() {
     this.missed = 0;
     this.phrases = [
-      new Phrase('Practice radical self love'),
-      new Phrase('You are worthy of rest'),
-      new Phrase('Liberate yourself from your inner critic'),
-      new Phrase('You are enough and then some'),
-      new Phrase('You can make a difference')
+      new Phrase('I am practicing radical self love'),
+      new Phrase('I am worthy of rest'),
+      new Phrase('I am liberating myself from my inner critic'),
+      new Phrase('I am enough and then some'),
+      new Phrase('I can make a difference')
     ];
     this.activePhrase = null;
   }
@@ -76,7 +76,7 @@ class Game {
       overlay.className = 'win';
       message.innerHTML = `You guessed the affirmation! </br>
       "${this.activePhrase.phrase.toUpperCase()}." </br>
-      Repeat this phrase often to cultivate positive self talk.`
+      Cultivate positive self talk by repeating this phrase to yourself often.`
     //If not, that means they lost and lose phrase and overlay is shown 
     } else {
       overlay.className = 'lose';
