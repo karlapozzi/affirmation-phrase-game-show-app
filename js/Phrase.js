@@ -18,13 +18,13 @@ class Phrase {
     }
 
   //Individual letters are added as list items to the HTML and set to hide by default
-    for (let i = 0; i < letters.length; i++) {
-      if (letters[i] === ' ') {
+    letters.forEach((letter) => {
+      if (letter === ' ') {
         list.innerHTML += `<li class="space"> </li>`;
       } else {
-        list.innerHTML += `<li class="hide letter ${letters[i]}">${letters[i]}</li>`;
+        list.innerHTML += `<li class="hide letter ${letter}">${letter}</li>`;
       }
-    }
+    })
   }  
 
 //Method to check whether or not a guessed letter is in the phrase 
