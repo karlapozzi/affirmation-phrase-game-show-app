@@ -90,7 +90,7 @@ class Game {
   resetGame() {
     document.querySelector('ul').innerHTML = '';
     const tries = document.getElementsByClassName('tries');
-    let keys = document.getElementsByClassName('key');
+    const keys = document.getElementsByClassName('key');
     for (let i = 0; i < keys.length; i++) {
       keys[i].className = 'key';
       keys[i].disabled = false;
